@@ -57,11 +57,11 @@ public class LevelEditor extends JFrame{
         palikat = new Palikkalista();
         palikkakuvat = new Image[5];
         //Ladataan resurssit
-        palikkakuvat[0] = Toolkit.getDefaultToolkit().getImage("palikka1.png");
-        palikkakuvat[1] = Toolkit.getDefaultToolkit().getImage("palikka2.png");
-        palikkakuvat[2] = Toolkit.getDefaultToolkit().getImage("palikka3.png");
-        palikkakuvat[3] = Toolkit.getDefaultToolkit().getImage("palikka4.png");
-        palikkakuvat[4] = Toolkit.getDefaultToolkit().getImage("palikka5.png");
+        palikkakuvat[0] = Toolkit.getDefaultToolkit().getImage(getClass().getResource("/palikka1.png"));
+        palikkakuvat[1] = Toolkit.getDefaultToolkit().getImage(getClass().getResource("/palikka2.png"));
+        palikkakuvat[2] = Toolkit.getDefaultToolkit().getImage(getClass().getResource("/palikka3.png"));
+        palikkakuvat[3] = Toolkit.getDefaultToolkit().getImage(getClass().getResource("/palikka4.png"));
+        palikkakuvat[4] = Toolkit.getDefaultToolkit().getImage(getClass().getResource("/palikka5.png"));
         palikkatyyppi = 0;
         try {
             // lis‰t‰‰n kuvat mt olioon
