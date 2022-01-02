@@ -21,6 +21,28 @@ Features
 * 7 different powerups / powerdowns
 * score keeping
 
+## How to run
+
+### Windows
+
+Download and run .exe installer from releases.
+
+Start by searching for "Parkanoid" in Windows menu.
+
+Latest version: https://github.com/palto/jamk-parkanoid/releases/download/1.0/parkanoid-1.0.exe
+
+### Linux
+
+Not supported yet
+
+### MacOS
+
+Not supported yet
+
+
+
+
+
 ## Modernization effort
 
 Game was originally written in Java 5 and Applets. Since those technologies are no longer runnable, a few
