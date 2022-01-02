@@ -1,5 +1,12 @@
 # Parkanoid
 
+***
+
+School project made in 2006. Code uploaded to Github for archive purposes only.
+This is not how I would create code nowadays :)
+
+***
+
 Arkanoid type game created with Java. Basic gameplay consists of bouncing balls against blocks to destroy
 them. When all the blocks are destroyed, the next level starts. Game ends when ball falls out of the
 bottom of the sceen.
