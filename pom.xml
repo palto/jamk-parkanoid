@@ -20,6 +20,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
+                <version>3.2.0</version>
                 <configuration>
                     <archive>
                         <manifest>
@@ -29,20 +30,39 @@
                     </archive>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>com.github.akman</groupId>
-                <artifactId>jpackage-maven-plugin</artifactId>
-                <version>0.1.3</version>
-                <configuration>
-                    <input>.</input>
-                    <name>${project.artifactId}</name>
-                    <mainjar>target/${project.build.finalName}.jar</mainjar>
-                    <toolhome>${env.JDK_HOME}</toolhome>
-                    <winmenugroup>Toni Paloniemi</winmenugroup>
-                    <winmenu>true</winmenu>
-                </configuration>
-            </plugin>
         </plugins>
     </build>
+
+    <profiles>
+        <profile>
+            <id>jpackage</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>com.github.akman</groupId>
+                        <artifactId>jpackage-maven-plugin</artifactId>
+                        <version>0.1.3</version>
+                        <configuration>
+                            <input>.</input>
+                            <name>${project.artifactId}</name>
+                            <mainjar>target/${project.build.finalName}.jar</mainjar>
+                            <toolhome>${env.JAVA_HOME}</toolhome>
+                            <winmenugroup>Toni Paloniemi</winmenugroup>
+                            <winmenu>true</winmenu>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <id>distribution</id>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>jpackage</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 
 </project>
